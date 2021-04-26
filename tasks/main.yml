@@ -2,7 +2,7 @@
 # tasks file for my-new-instance
    - name: create a disk
      gcp_compute_disk:
-         name: "{{item.disk}}"
+         name: disk_instance
          size_gb: 50
          source_image: 'projects/ubuntu-os-cloud/global/images/family/ubuntu-1604-lts'
          zone: "{{ zone }}"
@@ -15,7 +15,7 @@
      register: disk
    - name: create a address
      gcp_compute_address:
-         name: "{{item.address}}"
+         name: address_instance
          region: "{{ region }}"
          project: "{{ gcp_project }}"
          auth_kind: "{{ gcp_cred_kind }}"
@@ -27,7 +27,7 @@
    - name: create a instance
      gcp_compute_instance:
          state: present
-         name: "{{item.name}}"
+         name: my_new instance
          machine_type: f1-micro
          disks:
            - auto_delete: true
