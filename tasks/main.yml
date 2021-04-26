@@ -1,6 +1,6 @@
 ---
 # tasks file for my-new-instance
-- name: create a disk
+   - name: create a disk
      gcp_compute_disk:
          name: "{{item.disk}}"
          size_gb: 50
