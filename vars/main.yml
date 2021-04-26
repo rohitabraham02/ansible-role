@@ -1,0 +1,7 @@
+---
+# vars file for my-new-instance
+      gcp_project: valiant-hangout-310414
+      gcp_cred_kind: serviceaccount
+      gcp_cred_file: /home/admin_/valiant-hangout-310414-08d733642027.json
+      zone: "us-central1-a"
+      region: "us-central1"
